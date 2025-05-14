@@ -18,7 +18,7 @@ class ProductoLista(Resource):
         nuevo_producto = request.json
         nuevo_producto["id"] = len(productos) + 1
         productos.append(nuevo_producto)
-        return jsonify({"Mensaje": "Producto no agregado", "Producto": nuevo_producto})
+        return jsonify({"Mensaje": "Producto agregado", "Producto": nuevo_producto})
 
 class Producto(Resource):
     def get(self,id_producto):
