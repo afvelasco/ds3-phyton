@@ -38,7 +38,7 @@ class Producto(Resource):
     def delete(self, id_producto):
         global productos
         productos = [p for p in productos if p["id"] != id_producto]
-        return jsonify({"Mensaje": "Producto modificado"})
+        return jsonify({"Mensaje": "Producto eliminado"})
 
 api.add_resource(ProductoLista, "/productos")
 api.add_resource(Producto, "/productos/<int:id_producto>")
